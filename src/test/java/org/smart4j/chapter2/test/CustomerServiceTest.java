@@ -9,6 +9,7 @@ package org.smart4j.chapter2.test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.smart4j.chapter2.helper.DatabaseHelper;
 import org.smart4j.chapter2.model.Customer;
 import org.smart4j.chapter2.service.CustomerService;
 import org.smart4j.chapter2.service.CustomerServiceImpl;
@@ -33,14 +34,14 @@ public class CustomerServiceTest {
      */
     @Before
     public void init() {
-        // todo
+        DatabaseHelper.executeSqlFile("sql/customer_init.sql");
 
     }
 
     @Test
     public void getCustomerListTest() throws Exception {
         List<Customer> customerList = customerService.getCustomerList();
-        Assert.assertEquals(2, customerList.size());
+        Assert.assertEquals(3, customerList.size());
     }
 
     @Test

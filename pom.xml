@@ -89,11 +89,17 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.1</version>
         </dependency>
-        <!--jdbc的连接-->
+        <!--jdbc的连接,解决对连接数据的封装，以及接受返回值handler的使用-->
         <dependency>
             <groupId>commons-dbutils</groupId>
             <artifactId>commons-dbutils</artifactId>
             <version>1.5</version>
+        </dependency>
+        <!--连接池-->
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
         </dependency>
     </dependencies>
     <build>
